@@ -1,34 +1,41 @@
-# Continuous Control Project Report
+# Collaboration and Competition
 ***************************
-### Learning Algorithm
+### Algorithm
 ***************************
-DDPG agent algorithm, which is used in this project is based on the paper ["Continuous control with deep reinforcement learning"](https://arxiv.org/abs/1509.02971). This project is also an extension of the previous project - Banana Navigation in applying Deep Q-Network (DQN) to solve single agent navigation environment. However, this project has a more complex environment with continuous action spaces and multiple agents. 
+Multi Agent Deep Deterministic Policy Grdients (MADDPG) algorithm has been used to complete the project as the action space is continuous. The algorithm consists of 2 seperate agents each with set of 2 neural networks - actor and critic.
 
-### Network Architecture
-```sh
-The network consists of 2 networks:
-Actor: 256 -> 256
-Critic: 256 -> 256 -> 128
+### Network Architectures
+***************************
+Actor Network
+* Batch normalization on input.
+* A hidden layer with 256 units, relu activation.
+* Second hidden layer with 128 units, relu activation.
+* Fully connected layer with tanh activation.
+
+Critic Network
+* Batch normalization on input.
+* A hidden layer with 256 units, relu activation.
+* Second hidden layer with 128 units, relu activation.
+* Fully connected layer with tanh activation.
 
 Hyperparameters:
-replay buffer size = 1e6
-minibatch size = 64
-discount factor = 0.99
-tau for soft update of target parameters = 1e-3
-learning rate of the actor = 1e-4
-learning rate of the critic = 3e-4
-L2 weight decay = 0.0001
-```
+* Buffer size = 1e6
+* minibatch size = 256
+* discount factor = 0.99
+* tau for soft update of target parameters = 1e-3
+* learning rate of the actor = 1e-4
+* learning rate of the critic = 1e-3
+* L2 weight decay = 0.0001
+
 ### Result
 ***************************
-The agents were able to solve task in 185 episodes with a final average score of 30.26. 
-* [version 2] the agent is able to receive an average reward (over 100 episodes, and over all 20 agents) of at least +30.
-![alt](https://github.com/hmingkwan/Projects/blob/master/continuous_control/images/result.png)
+The agents were able to solve task in 2873 episodes with a final average score of 0.506. 
+![alt](https://github.com/hmingkwan/Projects/blob/master/tennis/images/result.png)
 
 ### Ideas for future work
 ***************************
 * Build an agent that finds the best hyperparameters for an agent
 * Prioritization for replay buffer
 * Paramter space noise for better exploration
-* Implement PPO, D3PG or D4PG that might produce better results
+* Test shared network between agents
 * Test separate replay buffer for agents
