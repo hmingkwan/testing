@@ -21,7 +21,7 @@ L2 weight decay = 0.0001
 ```
 ### Result
 ***************************
-The agents were able to solve task in 185 episodes with a final average score of 20.36. 
+The agents were able to solve task in 185 episodes with a final average score of 30.26. 
 * [version 2] the agent is able to receive an average reward (over 100 episodes, and over all 20 agents) of at least +30.
 ![alt](https://github.com/hmingkwan/Projects/blob/master/continuous_control/images/result.png)
 
