@@ -10,8 +10,16 @@ The environment is considered solved when the agent reaches average score of +0.
 
 ### Getting started
 ***************************
+1. Follow the [instructions](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md) to install Unity ML-Agents.
 
-The project uses Jupyter Notebook. Follow the instructions in `Tennis.ipynb` to get started with training your own agent!
+2. Download the environment from one of the links below. You need only select the environment that matches your operating system:
+* Linux: click [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
+* Mac OSX: click [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip)
+* Windows (32-bit): click [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)
+* Windows (64-bit): click [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
+
+3. Python 3.6 or [higher](https://www.anaconda.com/download)
+The project mainly uses Jupyter Notebook. Follow the instructions in `Tennis.ipynb` to install dependencies and get started with training your own agent!
 
 ### Solution
 ***************************
